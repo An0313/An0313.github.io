@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://An.1688.top/"/>
-  <updated>2018-12-13T10:38:41.000Z</updated>
+  <updated>2018-12-19T07:31:05.000Z</updated>
   <id>http://An.1688.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test_title</title>
-    <link href="http://An.1688.top/2018/12/13/test-title/"/>
-    <id>http://An.1688.top/2018/12/13/test-title/</id>
-    <published>2018-12-13T10:31:31.000Z</published>
-    <updated>2018-12-13T10:38:41.000Z</updated>
+    <title>babel-plugin-react-css-modules的配置</title>
+    <link href="http://An.1688.top/2018/12/19/babel-plugin-react-css-modules%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
+    <id>http://An.1688.top/2018/12/19/babel-plugin-react-css-modules的配置/</id>
+    <published>2018-12-19T06:31:28.000Z</published>
+    <updated>2018-12-19T07:31:05.000Z</updated>
     
     <summary type="html">
     
@@ -29,37 +29,17 @@
       
         
         
-          &lt;p&gt;test&lt;/p&gt;
-
+          &lt;blockquote&gt;
+&lt;p&gt;从我刚接触react到现在最头疼的事情就是css modules的配置，奈何公司太小只有我一个前端，只能在网上找相关教程，走了无数的坑终于…..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot;
         
       
     
     </summary>
     
     
-      <category term="js" scheme="http://An.1688.top/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://An.1688.top/2018/12/13/hello-world1/"/>
-    <id>http://An.1688.top/2018/12/13/hello-world1/</id>
-    <published>2018-12-13T10:28:53.000Z</published>
-    <updated>2018-12-13T10:28:53.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
+      <category term="-react" scheme="http://An.1688.top/tags/react/"/>
     
   </entry>
   
