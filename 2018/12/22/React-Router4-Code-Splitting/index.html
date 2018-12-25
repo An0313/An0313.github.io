@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="React,">
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="An的个人笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="An0313">
-<meta property="og:url" content="http://An.1688.top/tags/js/index.html">
+<meta name="description" content="我所知道 React-Router4 按需加载的几种实现 Bundle组件 react-loadable组件   我的代码： Bundle组件 react-loadable">
+<meta name="keywords" content="React">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React-Router4-Code-Splitting">
+<meta property="og:url" content="http://An.1688.top/2018/12/22/React-Router4-Code-Splitting/index.html">
 <meta property="og:site_name" content="An0313">
-<meta property="og:description" content="An的个人笔记">
+<meta property="og:description" content="我所知道 React-Router4 按需加载的几种实现 Bundle组件 react-loadable组件   我的代码： Bundle组件 react-loadable">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-22T09:16:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="An0313">
-<meta name="twitter:description" content="An的个人笔记">
+<meta name="twitter:title" content="React-Router4-Code-Splitting">
+<meta name="twitter:description" content="我所知道 React-Router4 按需加载的几种实现 Bundle组件 react-loadable组件   我的代码： Bundle组件 react-loadable">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://An.1688.top/tags/js/">
+  <link rel="canonical" href="http://An.1688.top/2018/12/22/React-Router4-Code-Splitting/">
 
 
 
 
 
-  <title>Tag: js | An0313</title>
+  <title>React-Router4-Code-Splitting | An0313</title>
   
 
 
@@ -155,7 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -239,52 +241,164 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>js<small>Tag</small>
-        </h1>
-      </div>
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://An.1688.top/2018/12/22/React-Router4-Code-Splitting/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="An">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="An0313">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">React-Router4-Code-Splitting</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-22T16:19:59+08:00">
+                2018-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/12/22/React-Router4-Code-Splitting/" class="leancloud_visitors" data-flag-title="React-Router4-Code-Splitting">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-tags" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2014/12/22/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2014-12-22T12:39:04+08:00" content="2014-12-22">
-          12-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <h4 id="我所知道-React-Router4-按需加载的几种实现"><a href="#我所知道-React-Router4-按需加载的几种实现" class="headerlink" title="我所知道 React-Router4 按需加载的几种实现"></a>我所知道 React-Router4 按需加载的几种实现</h4><ol>
+<li>Bundle组件</li>
+<li><a href="https://github.com/jamiebuilds/react-loadable" target="_blank" rel="noopener">react-loadable</a>组件 </li>
+</ol>
+<p>我的代码：</p>
+<p><a href="https://github.com/An0313/reactRouter4-codeSplitting" target="_blank" rel="noopener">Bundle组件</a></p>
+<p><a href="https://github.com/An0313/React-Router4-Code-Splitting" target="_blank" rel="noopener">react-loadable</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React/" rel="tag"># React</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/19/VUE页面加载进度条/" rel="next" title="VUE页面加载进度条">
+                <i class="fa fa-chevron-left"></i> VUE页面加载进度条
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -292,6 +406,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -312,8 +430,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -371,6 +498,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#我所知道-React-Router4-按需加载的几种实现"><span class="nav-number">1.</span> <span class="nav-text">我所知道 React-Router4 按需加载的几种实现</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -504,6 +647,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
