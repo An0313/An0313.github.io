@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="An0313">
 <meta property="og:description" content="安装mac 如果在root用户安装请先切换到其他账号 os - 其他账号用户名  1brew install mongodb CentOS1//  TODO    CentOS安装mongodb 配置mongo.conf创建配置目录 挑一个位置, 创建一个目录,比如叫mongodata, 用来放置mongo启动需要的三样东西：数据文件、日志文件、配置文件，随便起名，比如用来装数据的叫db、用来装日">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-22T11:05:21.000Z">
+<meta property="og:updated_time" content="2019-01-23T03:30:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongodb安装与配置">
 <meta name="twitter:description" content="安装mac 如果在root用户安装请先切换到其他账号 os - 其他账号用户名  1brew install mongodb CentOS1//  TODO    CentOS安装mongodb 配置mongo.conf创建配置目录 挑一个位置, 创建一个目录,比如叫mongodata, 用来放置mongo启动需要的三样东西：数据文件、日志文件、配置文件，随便起名，比如用来装数据的叫db、用来装日">
@@ -354,14 +354,69 @@
 <li>第二种启动方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --config /路径/mongodata/etc/mongo.conf</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  todo mongodb开机启动</span></span><br></pre></td></tr></table></figure>
-<h2 id="配置数据库用户"><a href="#配置数据库用户" class="headerlink" title="配置数据库用户"></a>配置数据库用户</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  todo mongodb配置数据库用户</span></span><br></pre></td></tr></table></figure>
+<h2 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h2><h6 id="Mac下的启动服务主要有三个地方可配置"><a href="#Mac下的启动服务主要有三个地方可配置" class="headerlink" title="Mac下的启动服务主要有三个地方可配置"></a>Mac下的启动服务主要有三个地方可配置</h6><ol>
+<li>系统偏好设置/用户与群组/登陆项</li>
+<li>/System/Library/StartupItems 和 /Library/StartupItems/</li>
+<li>launchd 系统初始化进程配置</li>
+</ol>
+<h6 id="Launch"><a href="#Launch" class="headerlink" title="Launch"></a>Launch</h6><table>
+<thead>
+<tr>
+<th>文件名</th>
+<th>启动类型 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LaunchDaemons</td>
+<td>用户未登陆前就启动的服务（守护进程）</td>
+</tr>
+<tr>
+<td>LaunchAgents</td>
+<td>用户登陆后启动的服务（守护进程）</td>
+</tr>
+</tbody>
+</table>
+<h6 id="文件路径"><a href="#文件路径" class="headerlink" title="文件路径"></a>文件路径</h6><ol>
+<li><code>/System/Library/？</code>目录是存放Apple自己开发的软件</li>
+<li><code>/Library/？</code>目录是系统管理员存放的第三方软件</li>
+<li><code>~/Library/？</code>目录是用户自己存放的第三方软件<blockquote>
+<p>提示：由于mongod可执行文件是第三方软件，所以放到~/Library目录或者/Library/？目录，当然在这里我存放到了系统管理员存放的第三方软件。?可以是LaunchDaemons或者LaunchAgents。</p>
+</blockquote>
+</li>
+</ol>
+<h6 id="plist简单配置文件"><a href="#plist简单配置文件" class="headerlink" title="plist简单配置文件"></a>plist简单配置文件</h6><table>
+<thead>
+<tr>
+<th>key</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Label</td>
+<td>进程的名字</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>ProgramArguments</td>
+<td>可执行文件的目录</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h6 id="服务设置"><a href="#服务设置" class="headerlink" title="服务设置"></a>服务设置</h6><p>启动服务 <code>sudo launchctl -w load plist[文件路径]</code><br>关闭服务 <code>sudo launchctl -w unload plist[文件路径]</code></p>
+<h2 id="配置角色"><a href="#配置角色" class="headerlink" title="配置角色"></a>配置角色</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> ./ mongo</span><br><span class="line"> </span><br><span class="line"> use admin</span><br><span class="line"> </span><br><span class="line"> // 创建root/admin用户</span><br><span class="line"> db.createUser(&#123;user:&quot;root&quot;,pwd:&quot;password&quot;,roles:[&quot;root&quot;]&#125;)</span><br><span class="line"> </span><br><span class="line"> db.createUser(  </span><br><span class="line">   &#123;  </span><br><span class="line">     user: &quot;admin&quot;,  </span><br><span class="line">     pwd: &quot;password&quot;,  </span><br><span class="line">     roles: [&#123;role: &quot;userAdminAnyDatabase&quot;, db: &quot;admin&quot;&#125;]  </span><br><span class="line">   &#125;  </span><br><span class="line"> )</span><br><span class="line"> </span><br><span class="line">// 创建数据库读写权限用户</span><br><span class="line">use ballmatch</span><br><span class="line">db.createUser(&#123;</span><br><span class="line">    user: &quot;football&quot;,</span><br><span class="line">    pwd: &quot;password&quot;,</span><br><span class="line">    roles: [&#123;role: &quot;readWrite&quot;,db: &quot;ballmatch&quot;&#125;]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// 密码认证</span><br><span class="line">db.auth(&quot;admin&quot;,&quot;password&quot;);</span><br></pre></td></tr></table></figure>
 <h2 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h2><ul>
 <li><p>方式一</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctrl + c</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>方式二</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ps -ef|grep mongo</span><br><span class="line"></span><br><span class="line">kill 进程号</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ps -ef|grep mongo</span><br><span class="line"></span><br><span class="line">kill 进程号</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方式三</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">use admin</span><br><span class="line"></span><br><span class="line">db.shutdownServer()</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -531,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mac"><span class="nav-number">1.1.</span> <span class="nav-text">mac</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CentOS"><span class="nav-number">1.2.</span> <span class="nav-text">CentOS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置mongo-conf"><span class="nav-number">2.</span> <span class="nav-text">配置mongo.conf</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建配置目录"><span class="nav-number">2.1.</span> <span class="nav-text">创建配置目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改mongo-conf"><span class="nav-number">2.2.</span> <span class="nav-text">修改mongo.conf</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动"><span class="nav-number">3.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开机启动"><span class="nav-number">4.</span> <span class="nav-text">开机启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置数据库用户"><span class="nav-number">5.</span> <span class="nav-text">配置数据库用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#停止"><span class="nav-number">6.</span> <span class="nav-text">停止</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mac"><span class="nav-number">1.1.</span> <span class="nav-text">mac</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CentOS"><span class="nav-number">1.2.</span> <span class="nav-text">CentOS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置mongo-conf"><span class="nav-number">2.</span> <span class="nav-text">配置mongo.conf</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建配置目录"><span class="nav-number">2.1.</span> <span class="nav-text">创建配置目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改mongo-conf"><span class="nav-number">2.2.</span> <span class="nav-text">修改mongo.conf</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动"><span class="nav-number">3.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开机启动"><span class="nav-number">4.</span> <span class="nav-text">开机启动</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Mac下的启动服务主要有三个地方可配置"><span class="nav-number">4.0.0.0.1.</span> <span class="nav-text">Mac下的启动服务主要有三个地方可配置</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Launch"><span class="nav-number">4.0.0.0.2.</span> <span class="nav-text">Launch</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#文件路径"><span class="nav-number">4.0.0.0.3.</span> <span class="nav-text">文件路径</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#plist简单配置文件"><span class="nav-number">4.0.0.0.4.</span> <span class="nav-text">plist简单配置文件</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#服务设置"><span class="nav-number">4.0.0.0.5.</span> <span class="nav-text">服务设置</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#配置角色"><span class="nav-number">5.</span> <span class="nav-text">配置角色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#停止"><span class="nav-number">6.</span> <span class="nav-text">停止</span></a></li></div>
             
 
           </div>
