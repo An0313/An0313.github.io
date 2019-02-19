@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Vue,">
+  <meta name="keywords" content="VUE,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="在根目录创建vue.config.js文件  配置vue.config.js 123456789101112131415// vue.config.jsmodule.exports = &amp;#123;  devServer: &amp;#123;    proxy: &amp;#123;      &apos;/api&apos;: &amp;#123;        target: &apos;http://localhost:3000&apos;, //对">
-<meta name="keywords" content="Vue">
+<meta name="description" content="在根目录创建vue.config.js文件  配置vue.config.js   123456789101112131415// vue.config.jsmodule.exports = &amp;#123;  devServer: &amp;#123;    proxy: &amp;#123;      &apos;/api&apos;: &amp;#123;        target: &apos;http://localhost:3000&apos;, /">
+<meta name="keywords" content="VUE">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue-cli3.*项目使用proxy跨域">
 <meta property="og:url" content="http://An.1688.top/2019/02/19/Vue-cli3-项目使用proxy跨域/index.html">
 <meta property="og:site_name" content="An0313">
-<meta property="og:description" content="在根目录创建vue.config.js文件  配置vue.config.js 123456789101112131415// vue.config.jsmodule.exports = &amp;#123;  devServer: &amp;#123;    proxy: &amp;#123;      &apos;/api&apos;: &amp;#123;        target: &apos;http://localhost:3000&apos;, //对">
+<meta property="og:description" content="在根目录创建vue.config.js文件  配置vue.config.js   123456789101112131415// vue.config.jsmodule.exports = &amp;#123;  devServer: &amp;#123;    proxy: &amp;#123;      &apos;/api&apos;: &amp;#123;        target: &apos;http://localhost:3000&apos;, /">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-19T09:34:02.000Z">
+<meta property="og:updated_time" content="2019-02-19T09:37:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue-cli3.*项目使用proxy跨域">
-<meta name="twitter:description" content="在根目录创建vue.config.js文件  配置vue.config.js 123456789101112131415// vue.config.jsmodule.exports = &amp;#123;  devServer: &amp;#123;    proxy: &amp;#123;      &apos;/api&apos;: &amp;#123;        target: &apos;http://localhost:3000&apos;, //对">
+<meta name="twitter:description" content="在根目录创建vue.config.js文件  配置vue.config.js   123456789101112131415// vue.config.jsmodule.exports = &amp;#123;  devServer: &amp;#123;    proxy: &amp;#123;      &apos;/api&apos;: &amp;#123;        target: &apos;http://localhost:3000&apos;, /">
 
 
 
@@ -337,9 +337,9 @@
 <li><p>在根目录创建vue.config.js文件</p>
 </li>
 <li><p>配置vue.config.js</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    proxy: &#123;</span><br><span class="line">      <span class="string">'/api'</span>: &#123;</span><br><span class="line">        target: <span class="string">'http://localhost:3000'</span>, <span class="comment">//对应自己的接口</span></span><br><span class="line">        changeOrigin: <span class="literal">true</span>,</span><br><span class="line">        ws: <span class="literal">true</span>,</span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          <span class="string">'^/api'</span>: <span class="string">''</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    proxy: &#123;</span><br><span class="line">      <span class="string">'/api'</span>: &#123;</span><br><span class="line">        target: <span class="string">'http://localhost:3000'</span>, <span class="comment">//对应自己的接口</span></span><br><span class="line">        changeOrigin: <span class="literal">true</span>,</span><br><span class="line">        ws: <span class="literal">true</span>,</span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          <span class="string">'^/api'</span>: <span class="string">''</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ajax</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求 http://localhost:8080/api/XXXXXX </span></span><br><span class="line"><span class="comment">// 实际请求  http://localhost:3000/XXXXXX</span></span><br></pre></td></tr></table></figure>
 
       
@@ -358,7 +358,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vue/" rel="tag"># Vue</a>
+            <a href="/tags/VUE/" rel="tag"># VUE</a>
           
         </div>
       
@@ -460,7 +460,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
