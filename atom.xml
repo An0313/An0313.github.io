@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://An.1688.top/"/>
-  <updated>2019-01-23T10:03:49.000Z</updated>
+  <updated>2019-02-19T09:34:02.000Z</updated>
   <id>http://An.1688.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue-cli3.*项目使用proxy跨域</title>
+    <link href="http://An.1688.top/2019/02/19/Vue-cli3-%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8proxy%E8%B7%A8%E5%9F%9F/"/>
+    <id>http://An.1688.top/2019/02/19/Vue-cli3-项目使用proxy跨域/</id>
+    <published>2019-02-19T09:28:55.000Z</published>
+    <updated>2019-02-19T09:34:02.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;在根目录创建vue.config.js文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置vue.config.js&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="http://An.1688.top/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>小程序拖拽地图获取地图中心经纬度</title>
@@ -473,34 +501,6 @@
         
         
           &lt;h1 id=&quot;快应用的生命周期&quot;&gt;&lt;a href=&quot;#快应用的生命周期&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="快应用" scheme="http://An.1688.top/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>快应用环境搭建</title>
-    <link href="http://An.1688.top/2018/11/30/%E5%BF%AB%E5%BA%94%E7%94%A8%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://An.1688.top/2018/11/30/快应用环境搭建/</id>
-    <published>2018-11-30T04:06:21.000Z</published>
-    <updated>2019-01-29T07:08:35.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;IDE搭建&lt;/li&gt;
-&lt;li&gt;命令行搭建&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;1-IDE搭建&quot;&gt;&lt;a href=&quot;#1-IDE搭建&quot; class=&quot;headerlink&quot; title=&quot;1. IDE搭建&quot;&gt;&lt;/a&gt;1.
         
       
     
