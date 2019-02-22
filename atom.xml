@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://An.1688.top/"/>
-  <updated>2019-02-19T09:37:30.000Z</updated>
+  <updated>2019-02-22T08:02:36.000Z</updated>
   <id>http://An.1688.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Koa异步</title>
+    <link href="http://An.1688.top/2019/02/22/Koa%E5%BC%82%E6%AD%A5/"/>
+    <id>http://An.1688.top/2019/02/22/Koa异步/</id>
+    <published>2019-02-22T07:36:06.000Z</published>
+    <updated>2019-02-22T08:02:36.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="koa" scheme="http://An.1688.top/tags/koa/"/>
+    
+      <category term="node" scheme="http://An.1688.top/tags/node/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue-cli3.*项目使用proxy跨域</title>
@@ -479,30 +505,6 @@
 &lt;/blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;display
-        
-      
-    
-    </summary>
-    
-    
-      <category term="快应用" scheme="http://An.1688.top/tags/%E5%BF%AB%E5%BA%94%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>快应用生命周期</title>
-    <link href="http://An.1688.top/2018/11/30/%E5%BF%AB%E5%BA%94%E7%94%A8%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
-    <id>http://An.1688.top/2018/11/30/快应用生命周期/</id>
-    <published>2018-11-30T09:00:21.000Z</published>
-    <updated>2019-01-29T07:09:04.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;快应用的生命周期&quot;&gt;&lt;a href=&quot;#快应用的生命周期&quot; class=&quot;headerlink&quot;
         
       
     
