@@ -2849,14 +2849,9 @@ router.js12345678&#123;   name: &apos;Home&apos;,
       
         
           
-          项目中引入lib-flexible
-1.下载lib-flexible
-
-1npm i lib-flexible --save
-
-2.引入lib-flexible在main.js中引入lib-flexible1import &apos;lib-flexible&apos;
-
-使用px2rem-load
+          安装依赖1npm i lib-flexible --save
+1npm install px2rem-loader --save-dev
+配置px2rem-loadervue-cli 21.打开build/utils.js文件，找到exports.cssLoaders方法，在里面添加如下代码1234
           ...
           <!--noindex-->
           <div class="post-button text-center">
