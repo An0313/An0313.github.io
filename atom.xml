@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://An.1688.top/"/>
-  <updated>2019-08-27T08:10:53.000Z</updated>
+  <updated>2019-12-04T06:11:46.505Z</updated>
   <id>http://An.1688.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>base64toFile</title>
+    <link href="http://An.1688.top/2019/12/04/base64toFile/"/>
+    <id>http://An.1688.top/2019/12/04/base64toFile/</id>
+    <published>2019-12-04T06:00:26.000Z</published>
+    <updated>2019-12-04T06:11:46.505Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="-JS" scheme="http://An.1688.top/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue-插槽</title>
@@ -188,9 +212,9 @@
     </summary>
     
     
-      <category term="node" scheme="http://An.1688.top/tags/node/"/>
-    
       <category term="Koa" scheme="http://An.1688.top/tags/Koa/"/>
+    
+      <category term="node" scheme="http://An.1688.top/tags/node/"/>
     
       <category term="mysql" scheme="http://An.1688.top/tags/mysql/"/>
     
@@ -216,9 +240,9 @@
     </summary>
     
     
-      <category term="koa" scheme="http://An.1688.top/tags/koa/"/>
-    
       <category term="node" scheme="http://An.1688.top/tags/node/"/>
+    
+      <category term="koa" scheme="http://An.1688.top/tags/koa/"/>
     
   </entry>
   
@@ -477,30 +501,6 @@
     <link href="http://An.1688.top/2018/12/19/VUE%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E8%BF%9B%E5%BA%A6%E6%9D%A1/"/>
     <id>http://An.1688.top/2018/12/19/VUE页面加载进度条/</id>
     <published>2018-12-19T08:07:11.000Z</published>
-    <updated>2018-12-19T08:15:45.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="VUE" scheme="http://An.1688.top/tags/VUE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VUE配置标题</title>
-    <link href="http://An.1688.top/2018/12/19/VUE%E9%85%8D%E7%BD%AE%E6%A0%87%E9%A2%98/"/>
-    <id>http://An.1688.top/2018/12/19/VUE配置标题/</id>
-    <published>2018-12-19T08:05:37.000Z</published>
     <updated>2018-12-19T08:15:45.000Z</updated>
     
     <summary type="html">
