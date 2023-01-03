@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>解决移动端键盘遮挡输入框问题</title>
+      <link href="/2023/01/03/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%94%AE%E7%9B%98%E9%81%AE%E6%8C%A1%E8%BE%93%E5%85%A5%E6%A1%86/"/>
+      <url>/2023/01/03/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%94%AE%E7%9B%98%E9%81%AE%E6%8C%A1%E8%BE%93%E5%85%A5%E6%A1%86/</url>
+      
+        <content type="html"><![CDATA[<h3 id="页面高度小于100vh"><a href="#页面高度小于100vh" class="headerlink" title="页面高度小于100vh"></a>页面高度小于100vh</h3><p>无需处理</p><h3 id="页面高度大于等于100vh"><a href="#页面高度大于等于100vh" class="headerlink" title="页面高度大于等于100vh"></a>页面高度大于等于100vh</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// input onFocus 事件中</span></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 1、  element.scrollIntoView();</span></span><br><span class="line">  <span class="comment">// 2、  Element.scrollIntoViewIfNeeded()</span></span><br><span class="line">  <span class="comment">// 3、  window.scrollTo(0, document.body.scrollHeight)</span></span><br><span class="line">&#125;, <span class="number">300</span>)</span><br></pre></td></tr></table></figure><p>以上方法需要配合css，保证页面不小于100vh</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.page</span> &#123;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">100vh</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 移动端兼容问题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>js 对象与 queryString 相互转换</title>
       <link href="/2022/12/30/js%20%E5%AF%B9%E8%B1%A1%E4%B8%8EqueryString%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/"/>
       <url>/2022/12/30/js%20%E5%AF%B9%E8%B1%A1%E4%B8%8EqueryString%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/</url>
