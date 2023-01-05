@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="移动端兼容问题," />
+  <meta name="keywords" content="webpack," />
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="页面高度小于100vh无需处理 页面高度大于等于100vh123456&#x2F;&#x2F; input onFocus 事件中setTimeout(() &#x3D;&gt; &amp;#123;  &#x2F;&#x2F; 1、  element.scrollIntoView();  &#x2F;&#x2F; 2、  Element.scrollIntoViewIfNeeded()  &#x2F;&#x2F; 3、  window.scrollTo(0, document.body.sc">
+<meta name="description" content="配置打包体积分析与耗时分析Webpack Bundle Analyzer 文档 Speed Measure Plugin 文档 1yarn add webpack-bundle-analyzer speed-measure-webpack-plugin  webpakc.config.js 1234567891011121314&#x2F;&#x2F; 可视化打包const &amp;#123; BundleAnalyzer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决移动端键盘遮挡输入框问题">
-<meta property="og:url" content="http://example.com/2023/01/03/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%94%AE%E7%9B%98%E9%81%AE%E6%8C%A1%E8%BE%93%E5%85%A5%E6%A1%86/index.html">
+<meta property="og:title" content="webpack5 优化">
+<meta property="og:url" content="http://example.com/2023/01/05/webpack%E6%89%93%E5%8C%85/index.html">
 <meta property="og:site_name" content="An0313">
-<meta property="og:description" content="页面高度小于100vh无需处理 页面高度大于等于100vh123456&#x2F;&#x2F; input onFocus 事件中setTimeout(() &#x3D;&gt; &amp;#123;  &#x2F;&#x2F; 1、  element.scrollIntoView();  &#x2F;&#x2F; 2、  Element.scrollIntoViewIfNeeded()  &#x2F;&#x2F; 3、  window.scrollTo(0, document.body.sc">
+<meta property="og:description" content="配置打包体积分析与耗时分析Webpack Bundle Analyzer 文档 Speed Measure Plugin 文档 1yarn add webpack-bundle-analyzer speed-measure-webpack-plugin  webpakc.config.js 1234567891011121314&#x2F;&#x2F; 可视化打包const &amp;#123; BundleAnalyzer">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-01-03T05:27:50.000Z">
-<meta property="article:modified_time" content="2023-01-03T06:12:51.254Z">
+<meta property="article:published_time" content="2023-01-05T05:57:50.000Z">
+<meta property="article:modified_time" content="2023-01-05T06:45:24.840Z">
 <meta property="article:author" content="An0313">
-<meta property="article:tag" content="移动端兼容问题">
+<meta property="article:tag" content="webpack">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2023/01/03/移动端键盘遮挡输入框/"/>
+  <link rel="canonical" href="http://example.com/2023/01/05/webpack打包/"/>
 
 
 
 
 
-  <title>解决移动端键盘遮挡输入框问题 | An0313</title>
+  <title>webpack5 优化 | An0313</title>
   
 
 
@@ -269,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/03/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%94%AE%E7%9B%98%E9%81%AE%E6%8C%A1%E8%BE%93%E5%85%A5%E6%A1%86/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/05/webpack%E6%89%93%E5%8C%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -286,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">解决移动端键盘遮挡输入框问题</h1>
+          <h1 class="post-title" itemprop="name headline">webpack5 优化</h1>
         
 
         <div class="post-meta">
@@ -298,8 +298,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-01-03T13:27:50+08:00">
-                2023-01-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-01-05T13:57:50+08:00">
+                2023-01-05
               </time>
             
 
@@ -314,8 +314,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2023-01-03T14:12:51+08:00">
-                2023-01-03
+              <time title="更新于" itemprop="dateModified" datetime="2023-01-05T14:45:24+08:00">
+                2023-01-05
               </time>
             
           </span>
@@ -348,11 +348,49 @@
       
 
       
-        <h3 id="页面高度小于100vh"><a href="#页面高度小于100vh" class="headerlink" title="页面高度小于100vh"></a>页面高度小于100vh</h3><p>无需处理</p>
-<h3 id="页面高度大于等于100vh"><a href="#页面高度大于等于100vh" class="headerlink" title="页面高度大于等于100vh"></a>页面高度大于等于100vh</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// input onFocus 事件中</span></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 1、  element.scrollIntoView();</span></span><br><span class="line">  <span class="comment">// 2、  Element.scrollIntoViewIfNeeded()</span></span><br><span class="line">  <span class="comment">// 3、  window.scrollTo(0, document.body.scrollHeight)</span></span><br><span class="line">&#125;, <span class="number">300</span>)</span><br></pre></td></tr></table></figure>
+        <h1 id="配置打包体积分析与耗时分析"><a href="#配置打包体积分析与耗时分析" class="headerlink" title="配置打包体积分析与耗时分析"></a>配置打包体积分析与耗时分析</h1><p><a target="_blank" rel="noopener" href="https://github.com/webpack-contrib/webpack-bundle-analyzer">Webpack Bundle Analyzer 文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/stephencookdev/speed-measure-webpack-plugin#readme">Speed Measure Plugin 文档</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add webpack-bundle-analyzer speed-measure-webpack-plugin</span><br></pre></td></tr></table></figure>
 
-<p>以上方法需要配合css，保证页面不小于100vh</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.page</span> &#123;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">100vh</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>webpakc.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可视化打包</span></span><br><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">BundleAnalyzerPlugin</span> &#125; = <span class="built_in">require</span>(<span class="string">&#x27;webpack-bundle-analyzer&#x27;</span>);</span><br><span class="line"><span class="comment">// 打包耗时分析插件</span></span><br><span class="line"><span class="keyword">const</span> <span class="title class_">SpeedMeasureWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;speed-measure-webpack-plugin&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">BundleAnalyzerPlugin</span>(),</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">SpeedMeasureWebpackPlugin</span>(),</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  ]</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>根据体积分析与耗时插件的分析结果在针对优化</p>
+<h1 id="配置-externals"><a href="#配置-externals" class="headerlink" title="配置 externals"></a>配置 externals</h1><p><a target="_blank" rel="noopener" href="https://webpack.docschina.org/configuration/externals#root">externals 文档</a></p>
+<p>webpakc.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">      <span class="attr">files</span>: &#123;</span><br><span class="line">        <span class="attr">js</span>: [</span><br><span class="line">          <span class="string">&#x27;./static/js/lodash.min.js&#x27;</span>,</span><br><span class="line">          <span class="string">&#x27;./static/js/crypto-js.js&#x27;</span>,</span><br><span class="line">          <span class="string">&#x27;./static/js/vconsole.min.js&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">css</span>: []</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">externals</span>: &#123;</span><br><span class="line">    <span class="attr">vconsole</span>: <span class="string">&#x27;VConsole&#x27;</span>,</span><br><span class="line">    <span class="attr">lodash</span>: <span class="string">&#x27;_&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;crypto-js&#x27;</span>: <span class="string">&#x27;CryptoJS&#x27;</span>,</span><br><span class="line">    <span class="comment">// vue react vue-router....</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>项目中可根据环境针对配置</li>
+</ul>
+<h1 id="配置-Tree-Shaking"><a href="#配置-Tree-Shaking" class="headerlink" title="配置 Tree Shaking"></a>配置 Tree Shaking</h1><p><a target="_blank" rel="noopener" href="https://webpack.docschina.org/guides/tree-shaking/#root">Tree Shaking 文档</a></p>
+<p>package.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxx&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;sideEffects&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">mode</span>: <span class="string">&#x27;development&#x27;</span>,</span><br><span class="line">  <span class="attr">optimization</span>: &#123;</span><br><span class="line">    <span class="attr">usedExports</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>开启  Tree Shaking 后 <code>import &#39;./index.less&#39;</code> 将不会被打包…</li>
+</ul>
+<p>解决方案<br>package.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;sideEffects&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;**/*.less&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;antd-mobile/es/global&quot;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="多线程打包"><a href="#多线程打包" class="headerlink" title="多线程打包"></a>多线程打包</h1><h2 id="HappyPack-不推荐，不再维护"><a href="#HappyPack-不推荐，不再维护" class="headerlink" title="HappyPack (不推荐，不再维护)"></a>HappyPack (不推荐，不再维护)</h2><p><a target="_blank" rel="noopener" href="https://github.com/amireh/happypack#readme">HappyPack 文档</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev happypack</span><br></pre></td></tr></table></figure>
+
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HappyPack</span> = <span class="built_in">require</span>(<span class="string">&#x27;happypack&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.<span class="property">module</span> = &#123;</span><br><span class="line">  <span class="attr">rules</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">test</span>: <span class="regexp">/.js$/</span>,</span><br><span class="line">      <span class="comment">// 1) replace your original list of loaders with &quot;happypack/loader&quot;:</span></span><br><span class="line">      <span class="comment">// loaders: [ &#x27;babel-loader?presets[]=es2015&#x27; ],</span></span><br><span class="line">      <span class="attr">use</span>: <span class="string">&#x27;happypack/loader&#x27;</span>,</span><br><span class="line">      <span class="attr">include</span>: [ <span class="comment">/* ... */</span> ],</span><br><span class="line">      <span class="attr">exclude</span>: [ <span class="comment">/* ... */</span> ]</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">plugins</span>: [</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">HappyPack</span>(&#123;</span><br><span class="line">      <span class="comment">// 3) re-add the loaders you replaced above in #1:</span></span><br><span class="line">      <span class="attr">loaders</span>: [ <span class="string">&#x27;babel-loader?presets[]=es2015&#x27;</span> ]</span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="thread-loader"><a href="#thread-loader" class="headerlink" title="thread-loader"></a>thread-loader</h2><p><a target="_blank" rel="noopener" href="https://github.com/webpack-contrib/thread-loader">thread-loader 文档</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev thread-loader</span><br></pre></td></tr></table></figure>
+
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">module</span>: &#123;</span><br><span class="line">    <span class="attr">rules</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</span><br><span class="line">        <span class="attr">include</span>: path.<span class="title function_">resolve</span>(<span class="string">&#x27;src&#x27;</span>),</span><br><span class="line">        <span class="attr">use</span>: [</span><br><span class="line">          <span class="string">&#x27;thread-loader&#x27;</span>,</span><br><span class="line">          <span class="comment">// your expensive loader (e.g babel-loader)</span></span><br><span class="line">        ],</span><br><span class="line">      &#125;,</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="缓存已编译过的文件"><a href="#缓存已编译过的文件" class="headerlink" title="缓存已编译过的文件"></a>缓存已编译过的文件</h1><p><a target="_blank" rel="noopener" href="https://webpack.docschina.org/loaders/babel-loader#options">cacheDirectory 文档</a></p>
+<p>webpack.config.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">module</span>: &#123;</span><br><span class="line">  <span class="attr">rules</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">test</span>: <span class="regexp">/\.m?js$/</span>,</span><br><span class="line">      <span class="attr">exclude</span>: <span class="regexp">/(node_modules|bower_components)/</span>,</span><br><span class="line">      <span class="attr">use</span>: &#123;</span><br><span class="line">        <span class="attr">loader</span>: <span class="string">&#x27;babel-loader&#x27;</span>,</span><br><span class="line">        <span class="attr">options</span>: &#123;</span><br><span class="line">          <span class="attr">cacheDirectory</span>: <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="DllPlugin"><a href="#DllPlugin" class="headerlink" title="DllPlugin"></a>DllPlugin</h1><blockquote>
+<p>该插件可以将特定的类库提前打包然后引入，这种方式可以极大的减少类库的打包次数，只有当类库有更新版本时才会重新打包，并且也实现了将公共代码抽离成单独文件的优化方案</p>
+</blockquote>
 
       
     </div>
@@ -370,7 +408,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/" rel="tag"># 移动端兼容问题</a>
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
           
         </div>
       
@@ -383,8 +421,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/12/30/js%20%E5%AF%B9%E8%B1%A1%E4%B8%8EqueryString%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/" rel="next" title="js 对象与 queryString 相互转换">
-                <i class="fa fa-chevron-left"></i> js 对象与 queryString 相互转换
+              <a href="/2023/01/03/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%94%AE%E7%9B%98%E9%81%AE%E6%8C%A1%E8%BE%93%E5%85%A5%E6%A1%86/" rel="next" title="解决移动端键盘遮挡输入框问题">
+                <i class="fa fa-chevron-left"></i> 解决移动端键盘遮挡输入框问题
               </a>
             
           </div>
@@ -392,10 +430,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2023/01/05/webpack%E6%89%93%E5%8C%85/" rel="prev" title="webpack5 优化">
-                webpack5 优化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -532,7 +566,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E9%AB%98%E5%BA%A6%E5%B0%8F%E4%BA%8E100vh"><span class="nav-number">1.</span> <span class="nav-text">页面高度小于100vh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E9%AB%98%E5%BA%A6%E5%A4%A7%E4%BA%8E%E7%AD%89%E4%BA%8E100vh"><span class="nav-number">2.</span> <span class="nav-text">页面高度大于等于100vh</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%89%93%E5%8C%85%E4%BD%93%E7%A7%AF%E5%88%86%E6%9E%90%E4%B8%8E%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">配置打包体积分析与耗时分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-externals"><span class="nav-number">2.</span> <span class="nav-text">配置 externals</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Tree-Shaking"><span class="nav-number">3.</span> <span class="nav-text">配置 Tree Shaking</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%89%93%E5%8C%85"><span class="nav-number">4.</span> <span class="nav-text">多线程打包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HappyPack-%E4%B8%8D%E6%8E%A8%E8%8D%90%EF%BC%8C%E4%B8%8D%E5%86%8D%E7%BB%B4%E6%8A%A4"><span class="nav-number">4.1.</span> <span class="nav-text">HappyPack (不推荐，不再维护)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#thread-loader"><span class="nav-number">4.2.</span> <span class="nav-text">thread-loader</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%93%E5%AD%98%E5%B7%B2%E7%BC%96%E8%AF%91%E8%BF%87%E7%9A%84%E6%96%87%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">缓存已编译过的文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DllPlugin"><span class="nav-number">6.</span> <span class="nav-text">DllPlugin</span></a></li></ol></div>
             
 
           </div>
