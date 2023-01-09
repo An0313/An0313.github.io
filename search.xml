@@ -712,4 +712,19 @@
         <tag>webpack</tag>
       </tags>
   </entry>
+  <entry>
+    <title>git 常用配置</title>
+    <url>/2023/01/09/git%20%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="忽略文件夹名称大小写"><a href="#忽略文件夹名称大小写" class="headerlink" title="忽略文件夹名称大小写"></a>忽略文件夹名称大小写</h1><ul>
+<li>默认忽略文件夹大小写</li>
+</ul>
+<p>查看本地配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --get core.ignorecase</span><br></pre></td></tr></table></figure>
+<p>修改</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 不忽略</span><br><span class="line">git config core.ignorecase false</span><br><span class="line">// 忽略</span><br><span class="line">git config core.ignorecase true</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
 </search>
