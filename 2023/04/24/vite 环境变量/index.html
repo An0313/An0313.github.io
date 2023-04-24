@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="node," />
+  <meta name="keywords" content="ts," />
 
 
 
@@ -79,17 +79,15 @@
 
 
 
-<meta name="description" content="卸载node    1brew install nvm     1echo &quot;source $(brew --prefix nvm)&#x2F;nvm.sh&quot; &gt;&gt; .bash_profile   修改 .bash_profile 文件 1vim .bash_profile 123456export NVM_DIR&#x3D;&quot;$HOME&#x2F;.nvm&quot;[ -s &amp;q">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac 安装 nvm">
-<meta property="og:url" content="http://example.com/2023/01/17/mac%20%E5%AE%89%E8%A3%85%20nvm/index.html">
+<meta property="og:title" content="vite 环境变量.md">
+<meta property="og:url" content="http://example.com/2023/04/24/vite%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/index.html">
 <meta property="og:site_name" content="An0313">
-<meta property="og:description" content="卸载node    1brew install nvm     1echo &quot;source $(brew --prefix nvm)&#x2F;nvm.sh&quot; &gt;&gt; .bash_profile   修改 .bash_profile 文件 1vim .bash_profile 123456export NVM_DIR&#x3D;&quot;$HOME&#x2F;.nvm&quot;[ -s &amp;q">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-01-17T06:17:50.000Z">
-<meta property="article:modified_time" content="2023-01-17T06:23:27.556Z">
+<meta property="article:published_time" content="2023-04-24T03:20:50.000Z">
+<meta property="article:modified_time" content="2023-04-24T02:18:36.139Z">
 <meta property="article:author" content="An0313">
-<meta property="article:tag" content="node">
+<meta property="article:tag" content="ts">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2023/01/17/mac 安装 nvm/"/>
+  <link rel="canonical" href="http://example.com/2023/04/24/vite 环境变量/"/>
 
 
 
 
 
-  <title>mac 安装 nvm | An0313</title>
+  <title>vite 环境变量.md | An0313</title>
   
 
 
@@ -277,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/17/mac%20%E5%AE%89%E8%A3%85%20nvm/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/24/vite%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -294,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mac 安装 nvm</h1>
+          <h1 class="post-title" itemprop="name headline">vite 环境变量.md</h1>
         
 
         <div class="post-meta">
@@ -306,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-01-17T14:17:50+08:00">
-                2023-01-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-04-24T11:20:50+08:00">
+                2023-04-24
               </time>
             
 
@@ -322,8 +320,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2023-01-17T14:23:27+08:00">
-                2023-01-17
+              <time title="更新于" itemprop="dateModified" datetime="2023-04-24T10:18:36+08:00">
+                2023-04-24
               </time>
             
           </span>
@@ -356,23 +354,7 @@
       
 
       
-        <blockquote>
-<p>卸载node</p>
-</blockquote>
-<br/>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nvm </span><br></pre></td></tr></table></figure>
-<br/>
-
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;source $(brew --prefix nvm)/nvm.sh&quot; &gt;&gt; .bash_profile</span><br></pre></td></tr></table></figure>
-<br/>
-
-<p>修改 .bash_profile 文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .bash_profile</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm</span><br><span class="line">[ -s &quot;$NVM_DIR/bash_completion&quot; ] &amp;&amp; \. &quot;$NVM_DIR/bash_completion&quot;  # This loads nvm bash_completion</span><br><span class="line"></span><br><span class="line"># 解决关闭终端后nvm、node、npm命令失效</span><br><span class="line">source ~/.bash_profile </span><br></pre></td></tr></table></figure>
-<br/>
-
+        
       
     </div>
     
@@ -389,7 +371,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/node/" rel="tag"># node</a>
+            <a href="/tags/ts/" rel="tag"># ts</a>
           
         </div>
       
@@ -402,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2023/01/16/npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="next" title="npm 常用命令">
-                <i class="fa fa-chevron-left"></i> npm 常用命令
+              <a href="/2023/04/18/js%20%E7%A6%81%E7%94%A8%E8%A7%86%E9%A2%91%E5%BF%AB%E8%BF%9B%E4%B8%8E%E5%80%8D%E9%80%9F/" rel="next" title="js 禁用视频快进与倍速">
+                <i class="fa fa-chevron-left"></i> js 禁用视频快进与倍速
               </a>
             
           </div>
@@ -411,10 +393,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2023/01/17/ts%20%E5%BF%BD%E7%95%A5%E6%A0%A1%E9%AA%8C/" rel="prev" title="Ts 忽略校验">
-                Ts 忽略校验 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
