@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="node," />
+  <meta name="keywords" content="git," />
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="卸载node    1brew install nvm     1echo &quot;source $(brew --prefix nvm)&#x2F;nvm.sh&quot; &gt;&gt; .bash_profile   修改 .bash_profile 文件 1vim .bash_profile 123456export NVM_DIR&#x3D;&quot;$HOME&#x2F;.nvm&quot;[ -s &amp;q">
+<meta name="description" content="配置 打开翻墙软件，查看 http 代理服务器。例如 Shadowsocks.app为：127.0.0.1:1087 设置 git 全局代理：git config --global http.proxy SOCKS:&#x2F;&#x2F;127.0.0.1:7890  还原123456# 方式一git config --global --unset http.proxy# 方式二git config --globa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac 安装 nvm">
-<meta property="og:url" content="http://example.com/2023/01/17/mac%20%E5%AE%89%E8%A3%85%20nvm/index.html">
+<meta property="og:title" content="git 代理">
+<meta property="og:url" content="http://example.com/2023/07/10/git%20%E4%BB%A3%E7%90%86/index.html">
 <meta property="og:site_name" content="An0313">
-<meta property="og:description" content="卸载node    1brew install nvm     1echo &quot;source $(brew --prefix nvm)&#x2F;nvm.sh&quot; &gt;&gt; .bash_profile   修改 .bash_profile 文件 1vim .bash_profile 123456export NVM_DIR&#x3D;&quot;$HOME&#x2F;.nvm&quot;[ -s &amp;q">
+<meta property="og:description" content="配置 打开翻墙软件，查看 http 代理服务器。例如 Shadowsocks.app为：127.0.0.1:1087 设置 git 全局代理：git config --global http.proxy SOCKS:&#x2F;&#x2F;127.0.0.1:7890  还原123456# 方式一git config --global --unset http.proxy# 方式二git config --globa">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-01-17T06:17:50.000Z">
-<meta property="article:modified_time" content="2023-01-17T06:23:27.556Z">
+<meta property="article:published_time" content="2023-07-10T03:04:50.000Z">
+<meta property="article:modified_time" content="2023-07-10T03:10:29.216Z">
 <meta property="article:author" content="An0313">
-<meta property="article:tag" content="node">
+<meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2023/01/17/mac 安装 nvm/"/>
+  <link rel="canonical" href="http://example.com/2023/07/10/git 代理/"/>
 
 
 
 
 
-  <title>mac 安装 nvm | An0313</title>
+  <title>git 代理 | An0313</title>
   
 
 
@@ -277,7 +277,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/17/mac%20%E5%AE%89%E8%A3%85%20nvm/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/10/git%20%E4%BB%A3%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -294,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mac 安装 nvm</h1>
+          <h1 class="post-title" itemprop="name headline">git 代理</h1>
         
 
         <div class="post-meta">
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-01-17T14:17:50+08:00">
-                2023-01-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-07-10T11:04:50+08:00">
+                2023-07-10
               </time>
             
 
@@ -322,8 +322,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2023-01-17T14:23:27+08:00">
-                2023-01-17
+              <time title="更新于" itemprop="dateModified" datetime="2023-07-10T11:10:29+08:00">
+                2023-07-10
               </time>
             
           </span>
@@ -356,22 +356,11 @@
       
 
       
-        <blockquote>
-<p>卸载node</p>
-</blockquote>
-<br/>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nvm </span><br></pre></td></tr></table></figure>
-<br/>
-
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;source $(brew --prefix nvm)/nvm.sh&quot; &gt;&gt; .bash_profile</span><br></pre></td></tr></table></figure>
-<br/>
-
-<p>修改 .bash_profile 文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .bash_profile</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm</span><br><span class="line">[ -s &quot;$NVM_DIR/bash_completion&quot; ] &amp;&amp; \. &quot;$NVM_DIR/bash_completion&quot;  # This loads nvm bash_completion</span><br><span class="line"></span><br><span class="line"># 解决关闭终端后nvm、node、npm命令失效</span><br><span class="line">source ~/.bash_profile </span><br></pre></td></tr></table></figure>
-<br/>
+        <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><ol>
+<li>打开翻墙软件，查看 http 代理服务器。例如 Shadowsocks.app为：127.0.0.1:1087</li>
+<li>设置 git 全局代理：<code>git config --global http.proxy SOCKS://127.0.0.1:7890</code></li>
+</ol>
+<h1 id="还原"><a href="#还原" class="headerlink" title="还原"></a>还原</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 方式一</span><br><span class="line">git config --global --unset http.proxy</span><br><span class="line"></span><br><span class="line"># 方式二</span><br><span class="line">git config --global --unset http.https://github.com.proxy</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -389,7 +378,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/node/" rel="tag"># node</a>
+            <a href="/tags/git/" rel="tag"># git</a>
           
         </div>
       
@@ -402,8 +391,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2023/01/16/npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" rel="next" title="npm 常用命令">
-                <i class="fa fa-chevron-left"></i> npm 常用命令
+              <a href="/2023/07/05/homebrew%E5%88%87%E6%8D%A2%E6%BA%90/" rel="next" title="homebrew切换源">
+                <i class="fa fa-chevron-left"></i> homebrew切换源
               </a>
             
           </div>
@@ -411,10 +400,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2023/01/17/ts%20%E5%BF%BD%E7%95%A5%E6%A0%A1%E9%AA%8C/" rel="prev" title="Ts 忽略校验">
-                Ts 忽略校验 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -466,8 +451,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -536,6 +530,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%98%E5%8E%9F"><span class="nav-number">2.</span> <span class="nav-text">还原</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

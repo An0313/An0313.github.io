@@ -1162,4 +1162,17 @@
         <tag>homebrew</tag>
       </tags>
   </entry>
+  <entry>
+    <title>git 代理</title>
+    <url>/2023/07/10/git%20%E4%BB%A3%E7%90%86/</url>
+    <content><![CDATA[<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><ol>
+<li>打开翻墙软件，查看 http 代理服务器。例如 Shadowsocks.app为：127.0.0.1:1087</li>
+<li>设置 git 全局代理：<code>git config --global http.proxy SOCKS://127.0.0.1:7890</code></li>
+</ol>
+<h1 id="还原"><a href="#还原" class="headerlink" title="还原"></a>还原</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 方式一</span><br><span class="line">git config --global --unset http.proxy</span><br><span class="line"></span><br><span class="line"># 方式二</span><br><span class="line">git config --global --unset http.https://github.com.proxy</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
 </search>
