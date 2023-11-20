@@ -1204,10 +1204,20 @@
     <content><![CDATA[<ol>
 <li>圆角在 ios 设备 Text 中不生效</li>
 <li>Text 自带边距</li>
+<li>安卓transform skewX 属性不生效</li>
+<li>安卓通过<code>measure</code> <code>measureInWindow</code>api获取不到坐标与元素尺寸，ios可以正常返回，安卓需要给要获取的元素添加 <code>collapsable=&#123;false&#125; </code>属性</li>
 </ol>
 ]]></content>
       <tags>
         <tag>react native</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vite 清除缓存</title>
+    <url>/2023/11/20/vite%20%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>vite</tag>
       </tags>
   </entry>
 </search>
